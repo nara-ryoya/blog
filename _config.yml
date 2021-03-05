@@ -28,7 +28,7 @@ baseurl: "/jekyll_portfolio" # the subpath of your site, e.g. /blog
 url: "https://nara-ryoya.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: uts1nara
 github_username:  nara-ryoya
-plugins:
+gems:
 - jekyll-seo-tag
 
 

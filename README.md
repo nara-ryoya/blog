@@ -133,7 +133,7 @@ For the top navigation, create a navigation.yml file in `_data` directory with t
   link: /page-1/
 - name: Blog
   link: /blog/
-  dropdown: 
+  dropdown:
     - name: Page 2
       link: /page-2/
 ```

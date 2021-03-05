@@ -31,6 +31,7 @@ github_username:  nara-ryoya
 gems:
 - jekyll-seo-tag
 
+favicon: /licky.JPG
 
 
 # Build settings

@@ -35,7 +35,7 @@ gems:
 
 # Build settings
 # theme: minima
-theme: bulma-clean-theme
+theme: cayman
 
 plugins:
   - jekyll-feed

@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/jekyll_portfolio/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/jekyll_portfolio/" rel="alternate" type="text/html" /><updated>2021-03-05T14:45:52+09:00</updated><id>http://localhost:4000/jekyll_portfolio/feed.xml</id><title type="html">Ryoya Nara</title><subtitle>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</subtitle><entry><title type="html">Jekyllの仕組み</title><link href="http://localhost:4000/jekyll_portfolio/2021/03/05/Jekyll%E3%81%AE%E4%BB%95%E7%B5%84%E3%81%BF.html" rel="alternate" type="text/html" title="Jekyllの仕組み" /><published>2021-03-05T14:45:00+09:00</published><updated>2021-03-05T14:45:00+09:00</updated><id>http://localhost:4000/jekyll_portfolio/2021/03/05/Jekyll%E3%81%AE%E4%BB%95%E7%B5%84%E3%81%BF</id><content type="html" xml:base="http://localhost:4000/jekyll_portfolio/2021/03/05/Jekyll%E3%81%AE%E4%BB%95%E7%B5%84%E3%81%BF.html">&lt;p&gt;Jekyll分からん！！！！&lt;/p&gt;</content><author><name></name></author><summary type="html">Jekyll分からん！！！！</summary></entry><entry><title type="html">2A総括</title><link href="http://localhost:4000/jekyll_portfolio/2021/02/26/2A%E6%8C%AF%E3%82%8A%E8%BF%94%E3%82%8A.html" rel="alternate" type="text/html" title="2A総括" /><published>2021-02-26T14:15:00+09:00</published><updated>2021-02-26T14:15:00+09:00</updated><id>http://localhost:4000/jekyll_portfolio/2021/02/26/2A%E6%8C%AF%E3%82%8A%E8%BF%94%E3%82%8A</id><content type="html" xml:base="http://localhost:4000/jekyll_portfolio/2021/02/26/2A%E6%8C%AF%E3%82%8A%E8%BF%94%E3%82%8A.html">&lt;p&gt;2Aセメスターが終わったということで、せっかくだし軽く振り返り。
+僕は先輩から20コマ取ることを勧められたので、とりあえず以下の20コマを登録した。&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;月&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;火&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;水&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;木&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;金&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;信号解析基礎&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;情報通信理論&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;電子基礎物理&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;エネルギー工学基礎&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;ディジタル回路&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;電気電子計測&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;プログラミング基礎演習&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;電子基礎物理&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;電子デバイス基礎&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;電気磁気学Ⅰ&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;電気回路理論第一&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;数理手法Ⅰ&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;ソフトウェア1, 2&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;電気電子数学演習&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;電気磁気学Ⅱ&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;電気回路理論第一&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;数学1D&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;ソフトウェア1, 2&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;電気電子数学演習&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;数理手法Ⅷ&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;何科目か撤退するかどうか迷ったが、なんとか全ての科目のテストを受けてフル単。撤退しても成績には反映されないと聞いてはいたが、なんだかんだプライドが勝ってしまった。&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;月1:信号解析基礎 &lt;br /&gt;
+今学期一番好きだった。授業も分かりやすく、テストも簡単。履修することをおすすめする。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;月2:ディジタル回路 &lt;br /&gt;
+論理回路の基礎を学べた。授業はところどころ分かりづらいところがあったが、全体的にはとてもよかった。オンライン化にともない、テストが少し軽くなりすぎた印象。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;月3,4:電気磁気学I,II &lt;br /&gt;
+1Aでとても苦しめられた電磁気。1年の電磁気よりはるかに分かりやすく、とても助かった。ただテストの難易度は意外と高く、しっかりと勉強しないと得点できないと感じた。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;火1:情報通信理論 &lt;br /&gt;
+重要科目なのだろうが、全体的に分かりづらい授業だと感じた。テストも過去問から大きく傾向が変わり、壊滅的な出来になってしまった。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;火2:電気電子計測 &lt;br /&gt;
+教科書が分かりづらく、テストも暗記ゲーであまり面白くなかった。ただ、教科書の内容は比較的面白いと感じれたし、テスト自体の難易度は低めだったので、単位数稼ぎに履修するのはありだと思う。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;火3,4:電気回路理論第一 &lt;br /&gt;
+先生が二人とも優しかったし、説明も丁寧だった。中間の出来が結構悪かったので悲しかった。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;水2:プログラミング基礎演習 &lt;br /&gt;
+前半のC言語の説明は結構雑なところがあったが、課題の量と難易度がちょうどよく、個人的にはかなり評価が高い。最終レポートもそこまでの量はなく、2Aの中で数少ない良心的な科目だった。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;水3:数理手法I &lt;br /&gt;
+教員がひどい。Excelのすごさについてしれたのはよかった。授業はお世辞にもいいとは言えないが、教科書は比較的綺麗にまとめられていると思った。教員へのイライラを除けば、そこそこ有意義な科目だと思う。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;水4:数学1D &lt;br /&gt;
+物工、計数の人達が得意そうな授業。過去問過学習して臨んだら壊滅した。数学に自身のある人は履修してもいいと思うが、個人的には履修して一番後悔した科目。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;水5:数理手法Ⅷ &lt;br /&gt;
+ほとんど聞いてなかったし、テストに向けて何も準備をしなかったが、テスト当日の諸々のトラブルに助けられてなんとかなった。内容はほとんど頭にのこっていない。履修しなくても良かった。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;木1,2:電子基礎物理 &lt;br /&gt;
+先輩から絶対に取るなと言われていたが、適当なノリで取ってしまった。統計力学の内容は結構面白いと感じたし、テストも意外となんとかなる範囲だったので、個人的にはいい授業だったと思った。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;木3:ソフトウェア1 &lt;br /&gt;
+C言語の基礎を学ぶ授業。授業用ホームページがとても分かりやすく、
+先生の説明もかなり噛み砕いてくれていてとても助かった。課題もちょうどいい感じだった。2Aで一番好評な科目だったと思われる。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;木4:ソフトウェア2 &lt;br /&gt;
+ソフトウェア1の続き。大幅に難易度があがり、ただただ実装が重い課題が続いてかなり辛かった。2A2タームでメンタルを壊しかけた主要要因。内容は教育的なものが多かったように思ったが、流石に課題が多すぎると感じた。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;金1:エネルギー工学基礎 &lt;br /&gt;
+取らなくていい科目。テストも課題も超適当に臨んでしまった。内容も興味範囲外だった。履修しなくても良い。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;金2:電子デバイス基礎 &lt;br /&gt;
+リアタイの授業は第2回あたりで脱落してしまったが、録画を見返して
+みたら結構綺麗に説明していた。テストの難易度もちょうどよかったし、内容もそこそこ面白かった。個人的には高評価。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;金3, 4電気電子数学演習 &lt;br /&gt;
+前期教養では得点源になってくれた数学系の科目なので頑張りたいと思っていたが、前期教養とくらべて量も難易度も大きく上がったと感じた。中間が2回あり、あまり準備できないのもあって点数が伸びなかった。ただこういう系の科目は個人的には好みなので、勉強していて楽しかった。 
+&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;総評&gt; &lt;br /&gt;
+まぁ、コマ数が多すぎる。一個一個の授業は前期課程と比べてかなり質が高いと思ったが、ここまでコマ数が多いとどれも中途半端な理解のまま終わってしまったように感じた。
+やっぱり途中で疲れてしまってどの授業もまともに聞けなかったので、3Sはコマ数より興味範囲に的を絞った履修をしたい。
+&lt;/総評&gt;</content><author><name></name></author><summary type="html">2Aセメスターが終わったということで、せっかくだし軽く振り返り。 僕は先輩から20コマ取ることを勧められたので、とりあえず以下の20コマを登録した。</summary></entry></feed>

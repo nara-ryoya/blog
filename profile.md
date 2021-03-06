@@ -3,6 +3,12 @@ layout: page
 title: プロフィール
 ---
 
+# リンク
+- [Twitter](https://twitter.com/uts1nara)
+- [Github](https://github.com/nara-ryoya)
+- [Instagram](https://www.instagram.com/nara_ryoya/)
+- [e-mail](mailto:nara-ryoya428@g.ecc.u-tokyo.ac.jp)
+
 # 経歴
 
 2016年　3月　開成中学卒業

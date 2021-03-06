@@ -22,8 +22,8 @@
 <meta name="generator" content="Jekyll v3.9.0" />
 <meta property="og:title" content="Jekyllの仕組み" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="Jekyll分からん！！！！" />
-<meta property="og:description" content="Jekyll分からん！！！！" />
+<meta name="description" content="春休みにWebの勉強してみよう！と思い、友人から紹介されてJekyllでオリジナルのブログサイトを作ってみることにした。「簡単にできるよ」と言われたが、実際にテンプレートを自分でアレンジしようとすると意外と苦戦したので、メモとして残しておく。" />
+<meta property="og:description" content="春休みにWebの勉強してみよう！と思い、友人から紹介されてJekyllでオリジナルのブログサイトを作ってみることにした。「簡単にできるよ」と言われたが、実際にテンプレートを自分でアレンジしようとすると意外と苦戦したので、メモとして残しておく。" />
 <link rel="canonical" href="http://localhost:4000/blog/2021/03/05/Jekyll%E3%81%AE%E4%BB%95%E7%B5%84%E3%81%BF.html" />
 <meta property="og:url" content="http://localhost:4000/blog/2021/03/05/Jekyll%E3%81%AE%E4%BB%95%E7%B5%84%E3%81%BF.html" />
 <meta property="og:site_name" content="Ryoya Nara" />
@@ -32,7 +32,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Jekyllの仕組み" />
 <script type="application/ld+json">
-{"url":"http://localhost:4000/blog/2021/03/05/Jekyll%E3%81%AE%E4%BB%95%E7%B5%84%E3%81%BF.html","headline":"Jekyllの仕組み","dateModified":"2021-03-05T14:45:00+09:00","datePublished":"2021-03-05T14:45:00+09:00","description":"Jekyll分からん！！！！","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/blog/2021/03/05/Jekyll%E3%81%AE%E4%BB%95%E7%B5%84%E3%81%BF.html"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+{"url":"http://localhost:4000/blog/2021/03/05/Jekyll%E3%81%AE%E4%BB%95%E7%B5%84%E3%81%BF.html","headline":"Jekyllの仕組み","dateModified":"2021-03-05T14:45:00+09:00","datePublished":"2021-03-05T14:45:00+09:00","description":"春休みにWebの勉強してみよう！と思い、友人から紹介されてJekyllでオリジナルのブログサイトを作ってみることにした。「簡単にできるよ」と言われたが、実際にテンプレートを自分でアレンジしようとすると意外と苦戦したので、メモとして残しておく。","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/blog/2021/03/05/Jekyll%E3%81%AE%E4%BB%95%E7%B5%84%E3%81%BF.html"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <!-- head scripts --></head>
 
@@ -96,7 +96,237 @@
 
     <p>Published: Mar 5, 2021 by </p>
 
-    <p>Jekyll分からん！！！！</p>
+    <p>春休みにWebの勉強してみよう！と思い、友人から紹介されてJekyllでオリジナルのブログサイトを作ってみることにした。「簡単にできるよ」と言われたが、実際にテンプレートを自分でアレンジしようとすると意外と苦戦したので、メモとして残しておく。</p>
+
+<h1 id="jekyllの仕組み">Jekyllの仕組み</h1>
+<p>Jekyllで自作ブログを作るにあたり、いろいろな記事を見て試行錯誤したのだが、どうにもらちがあかない。記事によって紹介されているやり方がまちまちで、「結局何をどうすれば自分の思い通りになるのか」が全く把握できなかった。</p>
+
+<p>そこで、途中で方向転換して、「そもそもJekyllがどのように動いているのか」を完全に把握してしまうことに焦点を絞って試行錯誤してみた。そのうちに何となく仕組みを理解できたので、以下に書き留めておく。</p>
+<h2 id="jekyllのファイル構造一例">Jekyllのファイル構造(一例)</h2>
+<p>メインのディレクトリ構造は以下のようになる。</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>.
+├── Gemfile
+├── Gemfile.lock
+├── README.md
+├── _config.yml
+├── _data
+├── _includes
+├── _layouts
+├── _posts
+├── _sass
+├── _site
+├── index.md
+├── assets
+│   ├── css
+│   │   └── app.scss
+│   └── js
+│       └── app.js
+├── node_modules
+├── package-lock.json
+└── package.json
+</code></pre></div></div>
+<p>おそらく、多くの記事で紹介されているように、コマンドで<code class="language-plaintext highlighter-rouge">jekyll new (プロジェクト名)</code>と叩くだけでは、「_layouts」や「_includes」というディレクトリは出てこないだろう。ただ、Jekyllのファイル生成のメインを担うのはこれらのディレクトリであり、自分でテンプレートをアレンジする際にはこれらのディレクトリを用意して変更する必要がある。</p>
+
+<p>では、これらのディレクトリが用意されていない場合はどうなるのか。その場合は、ローカル内のライブラリの、特定のテーマに該当するディレクトリ内の「_layouts」や「_includes」などのディレクトリを参照してhtmlとcssを生成しているのだ。</p>
+
+<p>もう少し分かりやすく説明する(<a href="http://jekyllrb-ja.github.io/docs/themes/">こちらの記事</a>を参考に書いた)。
+以下のように、jekyllプロジェクトを立ち上げて、そのディレクトリ内に移動する。</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>jekyll new my-site
+cd my-site
+</code></pre></div></div>
+
+<p>次に以下のようにコマンドを叩く。すると、ローカル内の<em>theme</em>に相当するディレクトリのパスが出力されるはずだ。<em>theme</em>にはJekyllのテーマを入れられる。Jekyllのデフォルトのテーマはminimaなので、<code class="language-plaintext highlighter-rouge">bundle info --path minima</code>となる。</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bundle info --path theme
+&gt;&gt;/Library/Ruby/Gems/2.6.0/gems/minima-2.5.1
+</code></pre></div></div>
+<p>finderでこのディレクトリに移動して見てみると、「_layouts」などのディレクトリがあるのが確認できると思う。各ディレクトリの詳細な役割は、README.mdに詳細に英語で書かれているので、ここでは各ディレクトリのおおまかな役割について書いていく。</p>
+
+<ul>
+  <li>
+    <p>_layouts</p>
+
+    <p>テンプレートの1番の大枠となるhtmlファイルがおかれているディレクトリ。中にはblog.html、default.htmlなどのファイルが置かれており、これらのファイル名が各レイアウト名に対応しており、markdownの冒頭でこれらのどのレイアウトを使うのかを指定する。
+  例えば、index.mdの冒頭で、以下のようにしていしたら、index.htmlは_layouts内のblog.htmlテンプレートにしたがって生成されるのだ。</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  ---
+  layout: blog
+  title: Ryoya Nara
+  subtitle: 自作ブログ。
+  ---
+</code></pre></div>    </div>
+
+    <p>ここで、layout以外にも、titleやsubtitleなどのを指定しているのだが、これらもhtml生成に関わる重要な変数である。それについては次の項目で説明する。</p>
+  </li>
+  <li>
+    <p>_includes</p>
+
+    <p>例えば、_layoutsのdefault.htmlが以下のようになっているとする。
+  ```html
+  &lt;!DOCTYPE html&gt;</p>
+    <html>
+  <head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  &lt;meta name="theme-color" content=#ffffff&gt;
+  <link rel="stylesheet" href="/blog/assets/css/app.css" />
+  <link rel="shortcut icon" type="image/png" href="/blog/licky.JPG" />
+  <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.8.0/dist/alpine.min.js" defer=""></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" />
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-social@1/bin/bulma-social.min.css" />
+    
+  <!-- Begin Jekyll SEO tag v2.7.1 -->
+</head></html>
+  </li>
+</ul>
+<title>Jekyllの仕組み | Ryoya Nara</title>
+<meta name="generator" content="Jekyll v3.9.0" />
+
+<meta property="og:title" content="Jekyllの仕組み" />
+
+<meta property="og:locale" content="en_US" />
+
+<meta name="description" content="春休みにWebの勉強してみよう！と思い、友人から紹介されてJekyllでオリジナルのブログサイトを作ってみることにした。「簡単にできるよ」と言われたが、実際にテンプレートを自分でアレンジしようとすると意外と苦戦したので、メモとして残しておく。" />
+
+<meta property="og:description" content="春休みにWebの勉強してみよう！と思い、友人から紹介されてJekyllでオリジナルのブログサイトを作ってみることにした。「簡単にできるよ」と言われたが、実際にテンプレートを自分でアレンジしようとすると意外と苦戦したので、メモとして残しておく。" />
+
+<link rel="canonical" href="http://localhost:4000/blog/2021/03/05/Jekyll%E3%81%AE%E4%BB%95%E7%B5%84%E3%81%BF.html" />
+
+<meta property="og:url" content="http://localhost:4000/blog/2021/03/05/Jekyll%E3%81%AE%E4%BB%95%E7%B5%84%E3%81%BF.html" />
+
+<meta property="og:site_name" content="Ryoya Nara" />
+
+<meta property="og:type" content="article" />
+
+<meta property="article:published_time" content="2021-03-05T14:45:00+09:00" />
+
+<meta name="twitter:card" content="summary" />
+
+<meta property="twitter:title" content="Jekyllの仕組み" />
+
+<script type="application/ld+json">
+{"url":"http://localhost:4000/blog/2021/03/05/Jekyll%E3%81%AE%E4%BB%95%E7%B5%84%E3%81%BF.html","headline":"Jekyllの仕組み","dateModified":"2021-03-05T14:45:00+09:00","datePublished":"2021-03-05T14:45:00+09:00","description":"春休みにWebの勉強してみよう！と思い、友人から紹介されてJekyllでオリジナルのブログサイトを作ってみることにした。「簡単にできるよ」と言われたが、実際にテンプレートを自分でアレンジしようとすると意外と苦戦したので、メモとして残しておく。","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/blog/2021/03/05/Jekyll%E3%81%AE%E4%BB%95%E7%B5%84%E3%81%BF.html"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+
+<!-- End Jekyll SEO tag -->
+<!-- head scripts -->
+<p>&lt;/head&gt;</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;body&gt;
+    &lt;nav class="navbar is-primary " x-data="{ openNav: false }"&gt;
+&lt;div class="container"&gt;
+    &lt;div class="navbar-brand"&gt;
+        &lt;a href="/blog/" class="navbar-item"&gt;
+            Ryoya Nara
+        &lt;/a&gt;
+        &lt;a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navMenu" :class="{ 'is-active': openNav }" x-on:click="openNav = !openNav"&gt;
+            &lt;span aria-hidden="true"&gt;&lt;/span&gt;
+            &lt;span aria-hidden="true"&gt;&lt;/span&gt;
+            &lt;span aria-hidden="true"&gt;&lt;/span&gt;
+        &lt;/a&gt;
+    &lt;/div&gt;
+    &lt;div class="navbar-menu" id="navMenu" :class="{ 'is-active': openNav }"&gt;
+        &lt;div class="navbar-start"&gt;
+            &lt;a href="/blog/" class="navbar-item "&gt;Home&lt;/a&gt;
+            
+            
+                
+                &lt;a href="/blog/profile.html" class="navbar-item "&gt;Profile&lt;/a&gt;
+                
+            
+            
+        &lt;/div&gt;
+
+        &lt;div class="navbar-end"&gt;
+            
+        &lt;/div&gt;
+
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre></div></div>
+<p>&lt;/nav&gt;</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>        &lt;section class="hero  is-medium  is-bold is-primary" &gt;
+&lt;div class="hero-body "&gt;
+    &lt;div class="container"&gt;
+        &lt;h1 class="title is-2"&gt;Jekyllの仕組み&lt;/h1&gt;
+        &lt;p class="subtitle is-3"&gt;&lt;/p&gt;
+        
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre></div></div>
+<p>&lt;/section&gt;</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>.....
+
+```
+ここで、```&lt;nav class="navbar is-primary " x-data="{ openNav: false }"&gt;
+&lt;div class="container"&gt;
+    &lt;div class="navbar-brand"&gt;
+        &lt;a href="/blog/" class="navbar-item"&gt;
+            Ryoya Nara
+        &lt;/a&gt;
+        &lt;a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navMenu" :class="{ 'is-active': openNav }" x-on:click="openNav = !openNav"&gt;
+            &lt;span aria-hidden="true"&gt;&lt;/span&gt;
+            &lt;span aria-hidden="true"&gt;&lt;/span&gt;
+            &lt;span aria-hidden="true"&gt;&lt;/span&gt;
+        &lt;/a&gt;
+    &lt;/div&gt;
+    &lt;div class="navbar-menu" id="navMenu" :class="{ 'is-active': openNav }"&gt;
+        &lt;div class="navbar-start"&gt;
+            &lt;a href="/blog/" class="navbar-item "&gt;Home&lt;/a&gt;
+            
+            
+                
+                &lt;a href="/blog/profile.html" class="navbar-item "&gt;Profile&lt;/a&gt;
+                
+            
+            
+        &lt;/div&gt;
+
+        &lt;div class="navbar-end"&gt;
+            
+        &lt;/div&gt;
+
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre></div></div>
+<p>&lt;/nav&gt;
+```のように埋め込まれているheader.htmlを_includesファイル内から参照してhtmlを作成している。つまり、_layouts内のテンプレートの各構成要素のさらなるテンプレートとなるファイルを保持しているのが_includesディレクトリであるわけだ。</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>また、_includesの各ファイルの中で、ところどころ```Jekyllの仕組み```のように変数が埋め込まれている箇所がある。先ほどのindex.mdの例であげた冒頭の記述は、これらの変数を指定してあげているのだ。
+</code></pre></div></div>
+
+<ul>
+  <li>
+    <p>_posts</p>
+
+    <p>ブログの投稿のmdファイルを入れるところ。</p>
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  ---
+  layout: post
+  title:  "2A総括"
+  date:   2021-02-26 14:15 +0900
+  ---
+</code></pre></div>    </div>
+    <p>冒頭にこのように記述して、テンプレートに埋める変数に代入している。</p>
+  </li>
+  <li>
+    <p>_sass, assets, node_modules</p>
+
+    <p>各cssを出力するためのテンプレートとなるscssファイルやcssファイル、jsファイルが置かれている(正直まだあまり仕組みが分かってない…)。</p>
+  </li>
+  <li>
+    <p>_site</p>
+
+    <p>各テンプレートから作成されたhtmlやcssが出力されるディレクトリ。</p>
+  </li>
+  <li>
+    <p>_config.yml</p>
+  </li>
+</ul>
+
+<p>以下のように</p>
+
 
 </div>
 

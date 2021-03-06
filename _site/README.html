@@ -1,0 +1,792 @@
+
+
+
+
+<!DOCTYPE html>
+<html >
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content=#ffffff>
+    <link rel="stylesheet" href="/blog/assets/css/app.css">
+    <link rel="shortcut icon" type="image/png"
+           href="/blog/licky.JPG" 
+    />
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.8.0/dist/alpine.min.js" defer></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css">
+    
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-social@1/bin/bulma-social.min.css">
+    
+    <!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>bulma-clean-theme | Ryoya Nara</title>
+<meta name="generator" content="Jekyll v3.9.0" />
+<meta property="og:title" content="bulma-clean-theme" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description." />
+<meta property="og:description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description." />
+<link rel="canonical" href="http://localhost:4000/blog/README.html" />
+<meta property="og:url" content="http://localhost:4000/blog/README.html" />
+<meta property="og:site_name" content="Ryoya Nara" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="bulma-clean-theme" />
+<script type="application/ld+json">
+{"url":"http://localhost:4000/blog/README.html","headline":"bulma-clean-theme","description":"Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.","@type":"WebPage","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<!-- head scripts --></head>
+
+  <body>
+    <nav class="navbar is-primary " x-data="{ openNav: false }">
+    <div class="container">
+        <div class="navbar-brand">
+            <a href="/blog/" class="navbar-item">
+                Ryoya Nara
+            </a>
+            <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navMenu" :class="{ 'is-active': openNav }" x-on:click="openNav = !openNav">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+        <div class="navbar-menu" id="navMenu" :class="{ 'is-active': openNav }">
+            <div class="navbar-start">
+                <a href="/blog/" class="navbar-item ">Home</a>
+                
+                
+                    
+                    <a href="/blog/profile.html" class="navbar-item ">Profile</a>
+                    
+                
+                
+            </div>
+
+            <div class="navbar-end">
+                
+            </div>
+
+        </div>
+    </div>
+</nav>
+
+    
+        <section class="hero  is-medium  is-bold is-primary" >
+    <div class="hero-body ">
+        <div class="container">
+            <h1 class="title is-2">bulma-clean-theme</h1>
+            <p class="subtitle is-3"></p>
+            
+        </div>
+    </div>
+</section>
+    
+    
+
+
+    <section class="section">
+        <div class="container">
+            <div class="columns">
+                
+                <div class="column is-12">
+                    
+                    
+                    
+                    
+                    
+<div class="content">
+    <h1 id="bulma-clean-theme">bulma-clean-theme</h1>
+
+<p><a href="https://badge.fury.io/rb/bulma-clean-theme"><img src="https://badge.fury.io/rb/bulma-clean-theme.svg" alt="Gem Version" /></a>
+<img src="https://img.shields.io/gem/dt/bulma-clean-theme.svg" alt="Gem" /></p>
+
+<p>This is a clean and simple Jekyll Theme built with the <a href="https://bulma.io/">Bulma</a> framework, providing a modern looking site to start with.</p>
+
+<p>The theme uses <a href="https://github.com/alpinejs/alpine">Alpine.js</a> for it’s interactive components, such as mobile navbar and notifications.</p>
+
+<h2 id="contents">Contents</h2>
+
+<ul>
+  <li><a href="#installation">Installation</a></li>
+  <li><a href="#usage">Usage</a>
+    <ul>
+      <li><a href="#pages">Pages</a>
+        <ul>
+          <li><a href="#page-hero">Page Hero</a></li>
+          <li><a href="#table-of-contents">Table Of Contents</a></li>
+        </ul>
+      </li>
+      <li><a href="#posts">Posts</a></li>
+      <li><a href="#navigation">Navigation</a></li>
+      <li><a href="#colours-and-styles">Colours and Styles</a></li>
+      <li><a href="#sidebar-visibility">Sidebar Visibility</a></li>
+      <li><a href="#menubar">Menubar</a></li>
+      <li><a href="#tabs">Tabs</a></li>
+      <li><a href="#notifications">Notifications</a></li>
+      <li><a href="#tags">Tags</a></li>
+      <li><a href="#google-analytics">Google Analytics</a></li>
+      <li><a href="#footer">Footer</a></li>
+      <li><a href="#products">Products</a></li>
+      <li><a href="#scripts">Scripts</a></li>
+      <li><a href="#callouts">Callouts</a></li>
+      <li><a href="#favicon">Favicon</a></li>
+      <li><a href="#showcases">Showcases</a></li>
+      <li><a href="#sponsors">Sponsors</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#disqus">Disqus</a></li>
+    </ul>
+  </li>
+  <li><a href="#contributing">Contributing</a></li>
+  <li><a href="#development">Development</a></li>
+  <li><a href="#licence">Licence</a></li>
+</ul>
+
+<h2 id="installation">Installation</h2>
+
+<p><strong>This theme requires Jekyll 3.8 so it is compatible with GitHub Pages.</strong></p>
+
+<p>Add this line to your Jekyll site’s <code class="language-plaintext highlighter-rouge">Gemfile</code>:</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">gem</span> <span class="s2">"bulma-clean-theme"</span>
+</code></pre></div></div>
+
+<p>And add this line to your Jekyll site’s <code class="language-plaintext highlighter-rouge">_config.yml</code>:</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">theme</span><span class="pi">:</span> <span class="s">bulma-clean-theme</span>
+</code></pre></div></div>
+
+<p>And then execute:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ bundle
+</code></pre></div></div>
+
+<p>Or install it yourself as:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ gem install bulma-clean-theme
+</code></pre></div></div>
+
+<h2 id="usage">Usage</h2>
+
+<h3 id="pages">Pages</h3>
+
+<p>Create your pages as individual markdown files and use the <code class="language-plaintext highlighter-rouge">layout: page</code> for normal pages. Set the pages title and subtitle in the front matter and it will appear in the hero.</p>
+
+<h4 id="page-hero">Page Hero</h4>
+
+<p><strong>New in 0.2</strong> 
+Heros can now display a background image if you provide a <code class="language-plaintext highlighter-rouge">hero_image: /path/to/image.jpg</code> setting in your page front matter, or in the <a href="https://jekyllrb.com/docs/configuration/front-matter-defaults/">defaults</a> in your sites <code class="language-plaintext highlighter-rouge">_config.yml</code></p>
+
+<p>You can also set the height of the hero by providing a bulma hero height class in your front matter, such as <code class="language-plaintext highlighter-rouge">hero_height: is-fullwidth</code>. If you do not provide this, it will revert to is-medium</p>
+
+<p><strong>New in 0.5.4</strong>
+If you would like to add a call to action button in the hero then add <code class="language-plaintext highlighter-rouge">hero_link</code> and <code class="language-plaintext highlighter-rouge">hero_link_text</code> to the page’s front matter.</p>
+
+<p><strong>New in 0.5.7</strong>
+If you would like to hide the hero, you can set <code class="language-plaintext highlighter-rouge">hide_hero: true</code> in the page’s front matter.</p>
+
+<p><strong>New in 0.7.1</strong>
+If you would like to darken the hero so the title stands out more, you can set <code class="language-plaintext highlighter-rouge">hero_darken: true</code> in the page’s front matter. You can overwrite the default background colour by setting the <code class="language-plaintext highlighter-rouge">$hero-darken</code> sass variable.</p>
+
+<h4 id="table-of-contents">Table Of Contents</h4>
+
+<p><strong>New in 0.5.8</strong>
+If you want to display a table of contents (toc) then add <code class="language-plaintext highlighter-rouge">toc: true</code> to your page’s front matter. You can customise the default table of contents title by setting <code class="language-plaintext highlighter-rouge">toc_title: My Custom Title</code> in the page’s front matter.</p>
+
+<p><strong>New in 0.10.3</strong>
+If you would prefer to display the contents in the menubar at the side of the page, then use <code class="language-plaintext highlighter-rouge">menubar_toc: true</code> instead of <code class="language-plaintext highlighter-rouge">toc: true</code>. This will also override the page’s <code class="language-plaintext highlighter-rouge">menubar</code> setting.</p>
+
+<h3 id="posts">Posts</h3>
+
+<p>If you want posts, create a <code class="language-plaintext highlighter-rouge">_posts</code> directory to store your posts as per normal Jekyll usage, with the <code class="language-plaintext highlighter-rouge">layout: post</code>. Next create a <code class="language-plaintext highlighter-rouge">blog</code> directory with an index.html file that has <code class="language-plaintext highlighter-rouge">layout: blog</code></p>
+
+<p>Set the paginate and the paginate_path up in the <code class="language-plaintext highlighter-rouge">_config.yaml</code> to configure the posts per page and the blog pagination path.</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">paginate</span><span class="pi">:</span> <span class="m">5</span>
+<span class="na">paginate_path</span><span class="pi">:</span> <span class="s2">"</span><span class="s">/blog/page:num"</span>
+</code></pre></div></div>
+
+<p><strong>New in 0.2</strong> It will now display an image in the blog page if you set <code class="language-plaintext highlighter-rouge">image: /path/to/image.jpg</code> in your post’s or page’s front matter, or in the <a href="https://jekyllrb.com/docs/configuration/front-matter-defaults/">defaults</a> in your sites <code class="language-plaintext highlighter-rouge">_config.yml</code></p>
+
+<p>You can also set the height of the hero by providing a Bulma hero height class in your front matter, such as <code class="language-plaintext highlighter-rouge">hero_height: is-fullwidth</code>. If you do not provide this, it will revert to is-medium</p>
+
+<h4 id="post-excerpt-and-summary">Post Excerpt and Summary</h4>
+
+<p>By default the blog page and the latest posts will use the automatically generated post excerpt. If you would like to override this you can set the summary in the post’s front matter.</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">layout</span><span class="pi">:</span> <span class="s">post</span>
+<span class="na">title</span><span class="pi">:</span> <span class="s">The post title</span>
+<span class="na">summary</span><span class="pi">:</span> <span class="pi">|-</span>
+    <span class="s">This is the custom summary for the post.</span>
+
+    <span class="s">It can be in **markdown format** if required.</span>
+</code></pre></div></div>
+
+<h4 id="social-share-buttons">Social Share Buttons</h4>
+
+<p>Share buttons will be displayed on your posts unless you hide them by adding <code class="language-plaintext highlighter-rouge">hide_share_buttons: true</code> to your config file.</p>
+
+<h3 id="navigation">Navigation</h3>
+
+<p>For the top navigation, create a navigation.yml file in <code class="language-plaintext highlighter-rouge">_data</code> directory with the following format with the pages you want to include in the top navigation. You can now also add items to a dropdown menu.</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Page </span><span class="m">1</span>
+  <span class="na">link</span><span class="pi">:</span> <span class="s">/page-1/</span>
+<span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Blog</span>
+  <span class="na">link</span><span class="pi">:</span> <span class="s">/blog/</span>
+  <span class="na">dropdown</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Page </span><span class="m">2</span>
+      <span class="na">link</span><span class="pi">:</span> <span class="s">/page-2/</span>
+</code></pre></div></div>
+
+<p>For the current page to have an active class, ensure the <code class="language-plaintext highlighter-rouge">link:</code> format matches your <a href="https://jekyllrb.com/docs/permalinks/#extensionless-permalinks">permalink</a> format. The above example will work with <code class="language-plaintext highlighter-rouge">permalink: pretty</code> setting in your <code class="language-plaintext highlighter-rouge">_config.yml</code></p>
+
+<h4 id="fixed-navbar">Fixed Navbar</h4>
+
+<p>To have a fixed navbar, you can set <code class="language-plaintext highlighter-rouge">fixed_navbar: top</code> or <code class="language-plaintext highlighter-rouge">fixed_navbar: bottom</code> respectively in your
+<code class="language-plaintext highlighter-rouge">_config.yml</code>.</p>
+
+<h3 id="colours-and-styles">Colours and Styles</h3>
+
+<p>To overwrite the primary theme colour, set a sass variable in <code class="language-plaintext highlighter-rouge">assets/css/app.scss</code> before importing <code class="language-plaintext highlighter-rouge">main</code></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>---
+---
+$primary: #333333;
+// Import Main CSS file from theme
+@import "main";
+</code></pre></div></div>
+
+<p>You can overwrite any of the <a href="http://versions.bulma.io/0.7.0/documentation/overview/variables/">Bulma initial variables</a> in this way as long as they are declared before the <code class="language-plaintext highlighter-rouge">@import "main"'</code></p>
+
+<h4 id="theme-color-meta-tag">Theme Color Meta Tag</h4>
+
+<p>If you want to update the theme color meta tag then set <code class="language-plaintext highlighter-rouge">theme_color: '#333333'</code> in your <code class="language-plaintext highlighter-rouge">_config.yml</code> file.</p>
+
+<h3 id="sidebar-visibility">Sidebar Visibility</h3>
+
+<p><strong>New in 0.2</strong></p>
+
+<p>If you want to show the sidebar with latest posts then set <code class="language-plaintext highlighter-rouge">show_sidebar: true</code> in the pages frontmatter, or in the <a href="https://jekyllrb.com/docs/configuration/front-matter-defaults/">defaults</a> in your sites <code class="language-plaintext highlighter-rouge">_config.yml</code></p>
+
+<h3 id="menubar">Menubar</h3>
+
+<p><strong>New in 0.3</strong></p>
+
+<p>The menubar gets its content from a data file in your site’s <code class="language-plaintext highlighter-rouge">_data</code> directory. Simply set the name of your data file in the page’s menubar setting in the frontmatter.</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">show_sidebar</span><span class="pi">:</span> <span class="no">false</span>
+<span class="na">menubar</span><span class="pi">:</span> <span class="s">example_menu</span>
+</code></pre></div></div>
+
+<p>You will probably want to disable the show_sidebar otherwise there will be little room for the page content.</p>
+
+<h4 id="creating-a-menubar-data-file">Creating a menubar data file</h4>
+
+<p>Create a data file in the _data directory and use the following format (if using yml)</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="pi">-</span> <span class="na">label</span><span class="pi">:</span> <span class="s">Example Menu</span>
+  <span class="na">items</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Home</span>
+      <span class="na">link</span><span class="pi">:</span> <span class="s">/</span>
+    <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Pages</span>
+      <span class="na">link</span><span class="pi">:</span> <span class="c1">#</span>
+      <span class="na">items</span><span class="pi">:</span>
+        <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Page With Sidebar</span> 
+          <span class="na">link</span><span class="pi">:</span> <span class="s">/page-1/</span>
+        <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Page Without Sidebar</span>
+          <span class="na">link</span><span class="pi">:</span> <span class="s">/page-2/</span>
+        <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Page With Menubar</span>
+          <span class="na">link</span><span class="pi">:</span> <span class="s">/page-3/</span>
+    <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Blog</span>
+      <span class="na">link</span><span class="pi">:</span> <span class="s">/blog/</span>
+</code></pre></div></div>
+
+<p>For the current page to have an active class, ensure the <code class="language-plaintext highlighter-rouge">link:</code> format matches your <a href="https://jekyllrb.com/docs/permalinks/#extensionless-permalinks">permalink</a> format. The above example will work with <code class="language-plaintext highlighter-rouge">permalink: pretty</code> setting in your <code class="language-plaintext highlighter-rouge">_config.yml</code></p>
+
+<h4 id="multiple-menus">Multiple menus</h4>
+
+<p>You may make multiple menus in the same file, separated by the label</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="pi">-</span> <span class="na">label</span><span class="pi">:</span> <span class="s">Menu Label</span>
+  <span class="na">items</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Example item</span>
+      <span class="na">link</span><span class="pi">:</span> <span class="s">/example-item/</span>
+<span class="pi">-</span> <span class="na">label</span><span class="pi">:</span> <span class="s">Second Menu Label</span>
+  <span class="na">items</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Parent Item</span>
+      <span class="na">link</span><span class="pi">:</span> <span class="s">/parent-item/</span>
+      <span class="na">items</span><span class="pi">:</span>
+        <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Sublink</span> 
+          <span class="na">link</span><span class="pi">:</span> <span class="s">/sublink/</span>
+        <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Sublink </span><span class="m">2</span>
+          <span class="na">link</span><span class="pi">:</span> <span class="s">/sublink2/</span>
+<span class="pi">-</span> <span class="na">label</span><span class="pi">:</span> <span class="s">Third Menu Label</span>
+  <span class="na">items</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Another example item</span>
+      <span class="na">link</span><span class="pi">:</span> <span class="s">/another-example-item/</span>
+</code></pre></div></div>
+
+<h3 id="tabs">Tabs</h3>
+
+<p><strong>New in 0.4</strong></p>
+
+<p>The tabs gets its content from a data file in your site’s <code class="language-plaintext highlighter-rouge">_data</code> directory. Simply set the name of your data file in the page’s menubar setting in the front matter.</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">title</span><span class="pi">:</span> <span class="s">Page with tabs</span>
+<span class="na">subtitle</span><span class="pi">:</span> <span class="s">Demo page with tabs</span>
+<span class="na">layout</span><span class="pi">:</span> <span class="s">page</span>
+<span class="na">show_sidebar</span><span class="pi">:</span> <span class="no">false</span>
+<span class="na">menubar</span><span class="pi">:</span> <span class="s">example_menu</span>
+<span class="na">tabs</span><span class="pi">:</span> <span class="s">example_tabs</span>
+</code></pre></div></div>
+
+<p>Tabs can be used in conjunction with menubar and/or sidebar if you wish.</p>
+
+<h4 id="creating-a-tabs-data-file">Creating a tabs data file</h4>
+
+<p>Create a data file in the _data directory and use the following format (if using yml)</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">alignment</span><span class="pi">:</span> <span class="s">is-left</span>
+<span class="na">style</span><span class="pi">:</span> <span class="s">is-boxed</span>
+<span class="na">size</span><span class="pi">:</span> <span class="s">is-large</span>
+<span class="na">items</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Tabs</span>
+    <span class="na">link</span><span class="pi">:</span> <span class="s">/page-4/</span>
+    <span class="na">icon</span><span class="pi">:</span> <span class="s">fa-smile-wink</span>
+  <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Sidebar</span>
+    <span class="na">link</span><span class="pi">:</span> <span class="s">/page-1/</span>
+    <span class="na">icon</span><span class="pi">:</span> <span class="s">fa-square</span>
+  <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">No Sidebar</span>
+    <span class="na">link</span><span class="pi">:</span> <span class="s">/page-2/</span>
+    <span class="na">icon</span><span class="pi">:</span> <span class="s">fa-ellipsis-v</span>
+  <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Menubar</span>
+    <span class="na">link</span><span class="pi">:</span> <span class="s">/page-3/</span>
+    <span class="na">icon</span><span class="pi">:</span> <span class="s">fa-bars</span>
+</code></pre></div></div>
+
+<h4 id="settings">Settings</h4>
+
+<p>You can control the alignment, style and size of the tabs by using the relevant <a href="https://bulma.io/documentation/components/tabs/">Bulma tabs classes</a>.</p>
+
+<h4 id="active-tab-highlighting">Active Tab Highlighting</h4>
+
+<p>It will automatically mark the active tab based on the current page.</p>
+
+<h4 id="icons">Icons</h4>
+
+<p>You can add icons to your tab by passing in the <a href="https://fontawesome.com/icons?d=gallery">Font Awesome icon class</a>.</p>
+
+<p>If you don’t wish to show icons then simply omit the option from your yaml file.</p>
+
+<h3 id="notifications">Notifications</h3>
+
+<p>You can include a notification in a page or post using the below include. The message is required but the status defaults to ‘is-warning’ and the icon defaults to ‘fas fa-exclamation-circle’, but can be overwritten by setting the values in the includes. The message can also be written in Markdown format.</p>
+
+<div class="language-liquid highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;div x-data="{visible: true}" markdown="0"&gt;
+    &lt;div class="notification is-warning" x-show.transition.duration.300ms="visible"&gt;
+        
+        &lt;article class="media"&gt;
+            
+                &lt;div class="media-left"&gt;
+                    &lt;span class="icon"&gt;&lt;i class="fas fa-exclamation-circle fa-lg"&gt;&lt;/i&gt;&lt;/span&gt;
+                &lt;/div&gt;
+            
+            &lt;div class="media-content"&gt;
+                &lt;div class="content"&gt;&lt;p&gt;This is the message for the notification&lt;/p&gt;
+&lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/article&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre></div></div>
+
+<h4 id="dismissible-notifications">Dismissible Notifications</h4>
+
+<p>To set a notification to be dismissible, set dismissible to ‘true’</p>
+
+<div class="language-liquid highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;div x-data="{visible: true}" markdown="0"&gt;
+    &lt;div class="notification is-warning" x-show.transition.duration.300ms="visible"&gt;
+        
+            &lt;button class="delete" x-on:click="visible = false"&gt;&lt;/button&gt;
+        
+        &lt;article class="media"&gt;
+            
+                &lt;div class="media-left"&gt;
+                    &lt;span class="icon"&gt;&lt;i class="fas fa-exclamation-circle fa-lg"&gt;&lt;/i&gt;&lt;/span&gt;
+                &lt;/div&gt;
+            
+            &lt;div class="media-content"&gt;
+                &lt;div class="content"&gt;&lt;p&gt;This notification is dismissable&lt;/p&gt;
+&lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/article&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre></div></div>
+
+<h4 id="iconless-notifications">Iconless Notifications</h4>
+
+<p>Omit the icon by setting icon to ‘false’</p>
+
+<div class="language-liquid highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;div x-data="{visible: true}" markdown="0"&gt;
+    &lt;div class="notification is-warning" x-show.transition.duration.300ms="visible"&gt;
+        
+        &lt;article class="media"&gt;
+            
+            &lt;div class="media-content"&gt;
+                &lt;div class="content"&gt;&lt;p&gt;This notification does not have an icon.&lt;/p&gt;
+&lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/article&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre></div></div>
+
+<h3 id="tags">Tags</h3>
+
+<p>To include a tag use the following include.</p>
+
+<div class="language-liquid highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;span class="tag  is-primary "&gt;
+    The tag text
+&lt;/span&gt;
+</code></pre></div></div>
+
+<p>You can overwrite the default style (is-primary) by passing in the style in the include tag.</p>
+
+<div class="language-liquid highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;span class="tag  is-light "&gt;
+    The tag text
+&lt;/span&gt;
+</code></pre></div></div>
+
+<h3 id="google-analytics">Google Analytics</h3>
+
+<p><strong>New in 0.2</strong></p>
+
+<p>To enable Google Analytics add <code class="language-plaintext highlighter-rouge">google_analytics: UA-xxxxxxxx</code> to your <code class="language-plaintext highlighter-rouge">_config.yml</code> replacing the UA-xxxxxxxx with your Google Analytics property</p>
+
+<h3 id="footer">Footer</h3>
+
+<p><strong>New in 0.4.1</strong></p>
+
+<p>To add some footer links, create a yaml file in the <code class="language-plaintext highlighter-rouge">_data</code> directory using the following format</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Blog</span>
+  <span class="na">link</span><span class="pi">:</span> <span class="s">/blog/</span>
+<span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">About</span>
+  <span class="na">link</span><span class="pi">:</span> <span class="s">/about/</span>
+<span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Privacy Policy</span>
+  <span class="na">link</span><span class="pi">:</span> <span class="s">/privacy-policy/</span>
+</code></pre></div></div>
+
+<p>Then add the name of your yaml file (without the .yml extension) into the footer_menu setting in the <code class="language-plaintext highlighter-rouge">_config.yml</code></p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">footer_menu</span><span class="pi">:</span> <span class="s">example_footer_menu</span>
+</code></pre></div></div>
+
+<h4 id="hiding-the-footer">Hiding the footer</h4>
+
+<p><strong>New in 0.5.2</strong></p>
+
+<p>If you would like to hide the footer on a particular page then set <code class="language-plaintext highlighter-rouge">hide_footer: true</code> in the page’s frontmatter.</p>
+
+<h3 id="products">Products</h3>
+
+<p><strong>New in 0.5</strong></p>
+
+<p>Now you can add simple product pages to your site using collections.</p>
+
+<h4 id="product-pages">Product pages</h4>
+
+<p>Start by creating a <code class="language-plaintext highlighter-rouge">_products</code> directory to hold your product pages and create a new page for each product, such as <code class="language-plaintext highlighter-rouge">product1.md</code>. In the front matter for this page you can set the standard settings, such as your title, subtitle, description (for meta-description), hero_image, as well as the additional product settings such as price, product_code, image, features and rating.</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">title</span><span class="pi">:</span> <span class="s">Product 1 Name</span>
+<span class="na">subtitle</span><span class="pi">:</span> <span class="s">Product 1 tagline here</span>
+<span class="na">description</span><span class="pi">:</span> <span class="s">This is a product description</span>
+<span class="na">hero_image</span><span class="pi">:</span> <span class="s">/img/hero-img.jpg</span>
+<span class="na">product_code</span><span class="pi">:</span> <span class="s">ABC124</span>
+<span class="na">layout</span><span class="pi">:</span> <span class="s">product</span>
+<span class="na">image</span><span class="pi">:</span> <span class="s">https://via.placeholder.com/640x480</span>
+<span class="na">price</span><span class="pi">:</span> <span class="s">£1.99 + VAT</span>
+<span class="na">features</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="na">label</span><span class="pi">:</span> <span class="s">Great addition to any home</span>
+      <span class="na">icon</span><span class="pi">:</span> <span class="s">fa-location-arrow</span>
+    <span class="pi">-</span> <span class="na">label</span><span class="pi">:</span> <span class="s">Comes in a range of styles</span>
+      <span class="na">icon</span><span class="pi">:</span> <span class="s">fa-grin-stars</span>
+    <span class="pi">-</span> <span class="na">label</span><span class="pi">:</span> <span class="s">Available in multiple sizes</span>
+      <span class="na">icon</span><span class="pi">:</span> <span class="s">fa-fighter-jet</span>
+<span class="na">rating</span><span class="pi">:</span> <span class="m">3</span>
+</code></pre></div></div>
+
+<p>The text you write for the page content will be displayed as the product description.</p>
+
+<p>Next, add the following to your <code class="language-plaintext highlighter-rouge">_config.yml</code> to use collections to process the product pages and output them as individual pages.</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">collections</span><span class="pi">:</span>
+  <span class="na">products</span><span class="pi">:</span> 
+    <span class="na">output</span><span class="pi">:</span> <span class="no">true</span>
+    <span class="na">layout</span><span class="pi">:</span> <span class="s">product</span>
+    <span class="na">image</span><span class="pi">:</span> <span class="s">https://via.placeholder.com/800x600</span>
+    <span class="na">show_sidebar</span><span class="pi">:</span> <span class="no">false</span>
+</code></pre></div></div>
+
+<p>You can also set default product page values here if you like, such as the layout or image.</p>
+
+<h4 id="product-reviews">Product Reviews</h4>
+
+<p>To add reviews to your product page, create a <code class="language-plaintext highlighter-rouge">reviews</code> directory in the <code class="language-plaintext highlighter-rouge">_data</code> directory and add a yml file with the name of the product_code from the product page, for example <code class="language-plaintext highlighter-rouge">_data/reviews/ABC124.yml</code>. Create the reviews using the following format:</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Mr E Xample</span>
+  <span class="na">rating</span><span class="pi">:</span> <span class="m">4</span>
+  <span class="na">title</span><span class="pi">:</span> <span class="s">Great product, highly recommended</span>
+  <span class="na">date</span><span class="pi">:</span> <span class="s">2019-01-01</span>
+  <span class="na">avatar</span><span class="pi">:</span> <span class="s">https://bulma.io/images/placeholders/128x128.png</span>
+  <span class="na">description</span><span class="pi">:</span> <span class="pi">&gt;</span>
+    <span class="s">The product worked really well. I would recommend this to most people to use. Delivery was quick and reasonable. </span>
+    <span class="s">Would recommend this to my friends. </span>
+<span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Mrs R E View</span>
+  <span class="na">rating</span><span class="pi">:</span> <span class="m">5</span>
+  <span class="na">title</span><span class="pi">:</span> <span class="s">Nice, really liked this</span>
+  <span class="na">date</span><span class="pi">:</span> <span class="s">2019-02-02</span>
+  <span class="na">description</span><span class="pi">:</span> <span class="pi">&gt;</span>
+    <span class="s">The product worked exactly as described. </span>
+</code></pre></div></div>
+
+<p>If you don’t want to display an avatar image then a default user icon will be displayed. If you don’t want to display a rating then omit it from the yml.</p>
+
+<h4 id="product-category-page">Product Category Page</h4>
+
+<p>To create a page listing your products you will need to create a product category page. Create a page, for example <code class="language-plaintext highlighter-rouge">products.md</code>, with the <code class="language-plaintext highlighter-rouge">layout: product-category</code> in the frontmatter. You can set the sort order of the products using <code class="language-plaintext highlighter-rouge">sort: title</code> to sort by the title, or by any setting in your product pages, such as price, rating or any custom frontmatter tags you wish to set.</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">title</span><span class="pi">:</span> <span class="s">Products</span>
+<span class="na">subtitle</span><span class="pi">:</span> <span class="s">Check out our range of products</span>
+<span class="na">layout</span><span class="pi">:</span> <span class="s">product-category</span>
+<span class="na">show_sidebar</span><span class="pi">:</span> <span class="no">false</span>
+<span class="na">sort</span><span class="pi">:</span> <span class="s">title</span>
+</code></pre></div></div>
+
+<h3 id="scripts">Scripts</h3>
+
+<p><strong>New in 0.5.2</strong></p>
+
+<p>There are two new files within the includes directory called <code class="language-plaintext highlighter-rouge">head-scripts.html</code> and <code class="language-plaintext highlighter-rouge">footer-scripts.html</code>. These are empty files by default but allow you to add any additional JavaScript to your site, such as the script for AddThis share buttons, in the <code class="language-plaintext highlighter-rouge">&lt;head&gt;</code> or after the <code class="language-plaintext highlighter-rouge">&lt;footer&gt;</code> of the page.</p>
+
+<h3 id="callouts">Callouts</h3>
+
+<p><strong>New in 0.5.4</strong></p>
+
+<p>You can now add callouts to a page to make a landing page style layout.</p>
+
+<h4 id="create-a-callout-data-file">Create a callout data file</h4>
+
+<p>Create a data file following the below format. The style is for classes to set the background colour and sizes you would like to use of the Bulma hero container for the callouts.</p>
+
+<p><strong>New in 0.5.7</strong> You can set the height of the callouts in the data file, such as is-small, is-medium or is-large. If unset it will be is-medium by default.</p>
+
+<p>The items have 6 fields, but only the title and subtitle are required. If the icon is a brand icon, such as GitHub in the below example, set <code class="language-plaintext highlighter-rouge">icon_brand: true</code>.</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">style</span><span class="pi">:</span> <span class="s">is-light</span>
+<span class="na">height</span><span class="pi">:</span> <span class="s">is-medium</span>
+<span class="na">items</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="na">title</span><span class="pi">:</span> <span class="s">Example callout </span><span class="m">1</span>
+    <span class="na">subtitle</span><span class="pi">:</span> <span class="s">Example subtitle </span><span class="m">1</span>
+    <span class="na">icon</span><span class="pi">:</span> <span class="s">fa-github</span>
+    <span class="na">icon_brand</span><span class="pi">:</span> <span class="no">true</span>
+    <span class="na">description</span><span class="pi">:</span> <span class="pi">&gt;</span>
+      <span class="s">The example description text goes here and can be multiple lines.</span>
+
+      <span class="s">For example, such as this. </span>
+    <span class="na">call_to_action_name</span><span class="pi">:</span> <span class="s">Call to action </span><span class="m">1</span>
+    <span class="na">call_to_action_link</span><span class="pi">:</span> <span class="s">/page-1/</span>
+</code></pre></div></div>
+
+<h4 id="set-the-callouts-in-the-frontmatter">Set the callouts in the frontmatter</h4>
+
+<p>To display the callouts on your page, add a callouts property in the frontmatter and set it to the name of your data file without the extension.</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">layout</span><span class="pi">:</span> <span class="s">page</span>
+<span class="na">title</span><span class="pi">:</span> <span class="s">Example Landing Page</span>
+<span class="na">subtitle</span><span class="pi">:</span> <span class="s">This is an example landing page</span>
+<span class="na">callouts</span><span class="pi">:</span> <span class="s">example_callouts</span>
+</code></pre></div></div>
+
+<h3 id="favicon">Favicon</h3>
+
+<p>The default favicon path is <code class="language-plaintext highlighter-rouge">/blog/favicon.png</code> but you can overwrite it in the sites <code class="language-plaintext highlighter-rouge">_config.yml</code> like this <code class="language-plaintext highlighter-rouge">favicon: /path/to/favicon.png</code></p>
+
+<h3 id="showcases">Showcases</h3>
+
+<p>Showcases allow you to display your work to others using a simple layout.</p>
+
+<h4 id="creating-a-showcase-datafile">Creating A Showcase Datafile</h4>
+
+<p>Create a datafile in your sites <code class="language-plaintext highlighter-rouge">_data</code> directory in the following format. Subtitle, features and tags are not required.</p>
+
+<p>The description text accepts markdown and is run through the markdownify filter on the page.</p>
+
+<p>The image_ratio will default to is-16by9 if it is not defined and accepts the <a href="https://bulma.io/documentation/elements/image/">Bulma image</a> classes.</p>
+
+<p>To display GitHub Stars, Forks and Watchers badges add your GitHub user and repo name to the github setting, such as <code class="language-plaintext highlighter-rouge">chrisrhymes/bulma-clean-theme</code></p>
+
+<p>To change the default styles of the features, set <code class="language-plaintext highlighter-rouge">features_styles</code>. This uses the styles from <a href="https://www.csrhymes.com/bulma-block-list/">bulma-block-list</a> npm package.</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">intro</span><span class="pi">:</span> <span class="pi">|-</span>
+  <span class="s">This is some introduction text for the showcases.</span>
+  
+  <span class="s">## Example Heading</span>
+  <span class="s">It can convert markdown format</span>
+
+<span class="na">items</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="na">title</span><span class="pi">:</span> <span class="s">Example showcase item</span>
+    <span class="na">subtitle</span><span class="pi">:</span> <span class="s">Example subtitle</span>
+    <span class="na">description</span><span class="pi">:</span> <span class="pi">|-</span>
+      <span class="s">This is the example description for this item that you are showcasing and has an image, title, description, tags and a link.</span>
+    <span class="na">features</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="s">This is a feature</span>
+      <span class="pi">-</span> <span class="s">This is a feature</span>
+    <span class="na">features_styles</span><span class="pi">:</span> <span class="s">is-centered is-outlined is-primary</span>
+    <span class="na">image</span><span class="pi">:</span> <span class="s">https://via.placeholder.com/1024x788</span>
+    <span class="na">image_ratio</span><span class="pi">:</span> <span class="s">is-16by9</span>
+    <span class="na">link</span><span class="pi">:</span> <span class="s">http://www.example.com</span>
+    <span class="na">link_text</span><span class="pi">:</span> <span class="s">View example</span>
+    <span class="na">tags</span><span class="pi">:</span> <span class="s">PHP,CSS,JavaScript</span>
+    <span class="na">github</span><span class="pi">:</span> <span class="s">user/repo-name</span>
+</code></pre></div></div>
+
+<h4 id="displaying-the-showcase">Displaying the Showcase</h4>
+
+<p>Set the showcase in the page’s front matter to be the name of the showcase data file without the extension. This gives you the ability to create multiple showcases to be used on different pages.</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">title</span><span class="pi">:</span> <span class="s">Showcase</span>
+<span class="na">subtitle</span><span class="pi">:</span> <span class="s">An example showcase page</span>
+<span class="na">layout</span><span class="pi">:</span> <span class="s">page</span>
+<span class="na">showcase</span><span class="pi">:</span> <span class="s">showcase_example</span>
+<span class="na">show_sidebar</span><span class="pi">:</span> <span class="no">false</span>
+</code></pre></div></div>
+
+<h3 id="sponsors">Sponsors</h3>
+
+<h4 id="sponsor-link-in-navbar">Sponsor link in navbar</h4>
+
+<p>If you have a GitHub sponsors account set up, you can add your username to <code class="language-plaintext highlighter-rouge">gh_sponsor</code> in the <code class="language-plaintext highlighter-rouge">_config.yml</code> file and it will display a link to your profile on the right of the navbar.</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">gh_sponsor</span><span class="pi">:</span> <span class="s">chrisrhymes</span>
+</code></pre></div></div>
+
+<h4 id="creating-a-sponsors-datafile">Creating a Sponsors Datafile</h4>
+
+<p>If you would like to create a page to thank your sponsors then create a data file, such as my_sponsors.yml file with the following structure:</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="pi">-</span> <span class="na">tier_name</span><span class="pi">:</span> <span class="s">Platinum Sponsors</span>
+  <span class="na">size</span><span class="pi">:</span> <span class="s">large</span>
+  <span class="na">description</span><span class="pi">:</span> <span class="pi">|-</span>
+    <span class="s">This is the description for the Platinum Tier</span>
+  <span class="na">sponsors</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Dave McDave</span>
+      <span class="na">profile</span><span class="pi">:</span> <span class="s">https://github.com/</span>
+    <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Sarah Lee-Cheesecake</span>
+      <span class="na">profile</span><span class="pi">:</span> <span class="s">https://github.com/</span>
+<span class="pi">-</span> <span class="na">tier_name</span><span class="pi">:</span> <span class="s">Gold Sponsors</span>
+  <span class="na">description</span><span class="pi">:</span> <span class="pi">|-</span>
+    <span class="s">This is the description for the Gold Tier</span>
+  <span class="na">sponsors</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Dave McDave</span>
+      <span class="na">profile</span><span class="pi">:</span> <span class="s">https://github.com/</span>
+</code></pre></div></div>
+
+<p>The <code class="language-plaintext highlighter-rouge">tier_name</code> and <code class="language-plaintext highlighter-rouge">description</code> are required. The <code class="language-plaintext highlighter-rouge">size</code> is not required, but can be overwritten to ‘large’ or ‘small’ to increase or decrease the size of the box and the text size.</p>
+
+<p>The sponsors require a name, but not a profile link.</p>
+
+<h4 id="displaying-the-sponsors">Displaying the Sponsors</h4>
+
+<p>To display the sponsors on your page, set the sponsors to the filename without the extension in the page’s front matter</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">layout</span><span class="pi">:</span> <span class="s">page</span>
+<span class="na">title</span><span class="pi">:</span> <span class="s">My Sponsors Page</span>
+<span class="na">sponsors</span><span class="pi">:</span> <span class="s">my_sponsors</span>
+</code></pre></div></div>
+
+<h3 id="gallery">Gallery</h3>
+
+<p>Display a simple image gallery on a page, with image descriptions.</p>
+
+<h4 id="create-an-image-gallery-data-file">Create an image gallery data file</h4>
+
+<p>Start by creating a gallery data file using the below format, for example <code class="language-plaintext highlighter-rouge">my_gallery.yml</code>.</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="pi">-</span> <span class="na">title</span><span class="pi">:</span> <span class="s">Image Gallery Title</span>
+  <span class="na">images</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="na">link</span><span class="pi">:</span> <span class="s">https://via.placeholder.com/800x450</span>
+      <span class="na">large_link</span><span class="pi">:</span> <span class="s">https://via.placeholder.com/1200x675</span>
+      <span class="na">alt</span><span class="pi">:</span> <span class="s">The alt text for the image</span>
+      <span class="na">description</span><span class="pi">:</span> <span class="pi">|-</span>
+        <span class="s">The image description can be written in **markdown** if required</span>
+      <span class="na">ratio</span><span class="pi">:</span> <span class="s">is-16by9</span>
+    <span class="pi">-</span> <span class="na">link</span><span class="pi">:</span> <span class="s">https://via.placeholder.com/800x600</span>
+      <span class="na">large_link</span><span class="pi">:</span> <span class="s">https://via.placeholder.com/1200x675</span>
+      <span class="na">alt</span><span class="pi">:</span> <span class="s">The alt text for the image</span>
+      <span class="na">description</span><span class="pi">:</span> <span class="s">The image description</span>
+      <span class="na">ratio</span><span class="pi">:</span> <span class="s">is-4by3</span>
+</code></pre></div></div>
+
+<ul>
+  <li>If a ratio is not provided it will default to 16 by 9. Use <a href="https://bulma.io/documentation/elements/image/">Bulma image</a> classes to define the image ratio required.</li>
+  <li>The description can be plain text or it can be markdown if required.</li>
+  <li>The alt will be used as the images alt text.</li>
+  <li>The large_link displays in a modal when the image is clicked</li>
+</ul>
+
+<h4 id="displaying-the-gallery">Displaying the gallery</h4>
+
+<p>In your pages front matter add a gallery with the datafiles filename without the extension.</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">layout</span><span class="pi">:</span> <span class="s">page</span>
+<span class="na">title</span><span class="pi">:</span> <span class="s">My Image Gallery</span>
+<span class="na">gallery</span><span class="pi">:</span> <span class="s">my_gallery</span>
+</code></pre></div></div>
+
+<h3 id="disqus">Disqus</h3>
+
+<p>Disqus comments are available for posts. To be able to use them, you need to set your disqus shortname in <code class="language-plaintext highlighter-rouge">_config.yml</code>. Then you need to set your Jekyll environment to production:</p>
+
+<p><code class="language-plaintext highlighter-rouge">JEKYLL_ENV=production bundle exec jekyll build</code>.</p>
+
+<p>Comments are enabled by default. If you want to disable them, set in the front matter this setting:</p>
+
+<div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code>comments: false
+</code></pre></div></div>
+
+<h2 id="contributing">Contributing</h2>
+
+<p>Bug reports and pull requests are welcome on GitHub at https://github.com/chrisrhymes/bulma-clean-theme. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the <a href="http://contributor-covenant.org">Contributor Covenant</a> code of conduct.</p>
+
+<h2 id="development">Development</h2>
+
+<p>To set up your environment to develop this theme, run <code class="language-plaintext highlighter-rouge">bundle install</code>.</p>
+
+<p>Your theme is setup just like a normal Jekyll site! To test your theme, run <code class="language-plaintext highlighter-rouge">bundle exec jekyll serve</code> and open your browser at <code class="language-plaintext highlighter-rouge">http://localhost:4000</code>. This starts a Jekyll server using your theme. Add pages, documents, data, etc. like normal to test your theme’s contents. As you make modifications to your theme and to your content, your site will regenerate and you should see the changes in the browser after a refresh, just like normal.</p>
+
+<h2 id="license">License</h2>
+
+<p>The theme is available as open source under the terms of the <a href="https://opensource.org/licenses/MIT">MIT License</a>.</p>
+
+
+</div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+    
+        <footer class="footer">
+    <div class="container">
+        
+        
+
+        <div class="content is-small has-text-centered">
+            <p class="">Theme built by <a href="https://www.csrhymes.com">C.S. Rhymes</a></p>
+        </div>
+    </div>
+</footer>
+
+    
+    <script src="/blog/assets/js/app.js" type="text/javascript"></script><!-- footer scripts --></body>
+</html>
+

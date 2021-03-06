@@ -1,9 +1,29 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/blog/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/blog/" rel="alternate" type="text/html" /><updated>2021-03-06T21:10:15+09:00</updated><id>http://localhost:4000/blog/feed.xml</id><title type="html">Ryoya Nara</title><subtitle>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</subtitle><entry><title type="html">Jekyllの仕組み</title><link href="http://localhost:4000/blog/2021/03/05/Jekyll%E3%81%AE%E4%BB%95%E7%B5%84%E3%81%BF.html" rel="alternate" type="text/html" title="Jekyllの仕組み" /><published>2021-03-05T14:45:00+09:00</published><updated>2021-03-05T14:45:00+09:00</updated><id>http://localhost:4000/blog/2021/03/05/Jekyll%E3%81%AE%E4%BB%95%E7%B5%84%E3%81%BF</id><content type="html" xml:base="http://localhost:4000/blog/2021/03/05/Jekyll%E3%81%AE%E4%BB%95%E7%B5%84%E3%81%BF.html">&lt;p&gt;春休みにWebの勉強してみよう！と思い、友人から紹介されてJekyllでオリジナルのブログサイトを作ってみることにした。「簡単にできるよ」と言われたが、実際にテンプレートを自分でアレンジしようとすると意外と苦戦したので、メモとして残しておく。&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/blog/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/blog/" rel="alternate" type="text/html" /><updated>2021-03-07T01:43:56+09:00</updated><id>http://localhost:4000/blog/feed.xml</id><title type="html">Ryoya Nara</title><subtitle>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</subtitle><entry><title type="html">Jekyllのコードブロックがうまくhtmlに変換されない！</title><link href="http://localhost:4000/blog/2021/03/07/Jekyll%E3%81%AE%E3%82%B3%E3%83%BC%E3%83%89%E3%83%96%E3%83%AD%E3%83%83%E3%82%AF%E3%81%8C%E3%81%86%E3%81%BE%E3%81%8Fhtml%E3%81%AB%E5%A4%89%E6%8F%9B%E3%81%95%E3%82%8C%E3%81%AA%E3%81%84.html" rel="alternate" type="text/html" title="Jekyllのコードブロックがうまくhtmlに変換されない！" /><published>2021-03-07T00:10:00+09:00</published><updated>2021-03-07T00:10:00+09:00</updated><id>http://localhost:4000/blog/2021/03/07/Jekyll%E3%81%AE%E3%82%B3%E3%83%BC%E3%83%89%E3%83%96%E3%83%AD%E3%83%83%E3%82%AF%E3%81%8C%E3%81%86%E3%81%BE%E3%81%8Fhtml%E3%81%AB%E5%A4%89%E6%8F%9B%E3%81%95%E3%82%8C%E3%81%AA%E3%81%84!</id><content type="html" xml:base="http://localhost:4000/blog/2021/03/07/Jekyll%E3%81%AE%E3%82%B3%E3%83%BC%E3%83%89%E3%83%96%E3%83%AD%E3%83%83%E3%82%AF%E3%81%8C%E3%81%86%E3%81%BE%E3%81%8Fhtml%E3%81%AB%E5%A4%89%E6%8F%9B%E3%81%95%E3%82%8C%E3%81%AA%E3%81%84.html">&lt;p&gt;前回に引き続きJekyllの話題。
+markdownで以下のようにコードブロックを書くと、どうもうまくhtmlに変換されない。色々見てみると、markdownコンバーターがコードブロックのコードを実際のLiquidのコードだと勝手に解釈してしまっているようだった。&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;```
+
+{% include header.html %}
+
+```
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;markdownのプレビューでは問題なく表示されているのに。。。
+&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;解決法&quot;&gt;解決法&lt;/h1&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.xmisao.com/2014/06/30/how-to-escape-liquid-tag-in-jekyll.html&quot;&gt;この記事&lt;/a&gt;で一発解決！。&lt;/p&gt;</content><author><name></name></author><summary type="html">前回に引き続きJekyllの話題。 markdownで以下のようにコードブロックを書くと、どうもうまくhtmlに変換されない。色々見てみると、markdownコンバーターがコードブロックのコードを実際のLiquidのコードだと勝手に解釈してしまっているようだった。</summary></entry><entry><title type="html">Jekyllの仕組み</title><link href="http://localhost:4000/blog/2021/03/05/Jekyll%E3%81%AE%E4%BB%95%E7%B5%84%E3%81%BF.html" rel="alternate" type="text/html" title="Jekyllの仕組み" /><published>2021-03-05T14:45:00+09:00</published><updated>2021-03-05T14:45:00+09:00</updated><id>http://localhost:4000/blog/2021/03/05/Jekyll%E3%81%AE%E4%BB%95%E7%B5%84%E3%81%BF</id><content type="html" xml:base="http://localhost:4000/blog/2021/03/05/Jekyll%E3%81%AE%E4%BB%95%E7%B5%84%E3%81%BF.html">&lt;p&gt;春休みにWebの勉強してみよう！と思い、友人から紹介されてJekyllでオリジナルのブログサイトを作ってみることにした。「簡単にできるよ」と言われたが、実際にテンプレートを自分でアレンジしようとすると意外と苦戦したので、メモとして残しておく。&lt;/p&gt;
 
 &lt;h1 id=&quot;jekyllの仕組み&quot;&gt;Jekyllの仕組み&lt;/h1&gt;
 &lt;p&gt;Jekyllで自作ブログを作るにあたり、いろいろな記事を見て試行錯誤したのだが、どうにもらちがあかない。記事によって紹介されているやり方がまちまちで、「結局何をどうすれば自分の思い通りになるのか」が全く把握できなかった。&lt;/p&gt;
 
 &lt;p&gt;そこで、途中で方向転換して、「そもそもJekyllがどのように動いているのか」を完全に把握してしまうことに焦点を絞って試行錯誤してみた。そのうちに何となく仕組みを理解できたので、以下に書き留めておく。&lt;/p&gt;
+
+&lt;h2 id=&quot;そもそもjekyllとは何なのか&quot;&gt;そもそもJekyllとは何なのか&lt;/h2&gt;
+
+&lt;p&gt;Jekyllとは、カッコよくいうと「静的サイトジェネレーター」と言われるものである。具体的にいうと、「markdownを書いてコマンドを叩くと、あらかじめ用意しておいたテンプレートに合うようなhtmlとCSSを作成してくれる」というとんでもない便利ツールなのである。&lt;/p&gt;
+
 &lt;h2 id=&quot;jekyllのファイル構造一例&quot;&gt;Jekyllのファイル構造(一例)&lt;/h2&gt;
 &lt;p&gt;メインのディレクトリ構造は以下のようになる。&lt;/p&gt;
 
@@ -42,7 +62,7 @@ cd my-site
 &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;bundle info --path theme
 &amp;gt;&amp;gt;/Library/Ruby/Gems/2.6.0/gems/minima-2.5.1
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;finderでこのディレクトリに移動して見てみると、「_layouts」などのディレクトリがあるのが確認できると思う。各ディレクトリの詳細な役割は、README.mdに詳細に英語で書かれているので、ここでは各ディレクトリのおおまかな役割について書いていく。&lt;/p&gt;
+&lt;p&gt;finderでこのディレクトリに移動して見てみると、「_layouts」などのディレクトリがあるのが確認できると思う。各ディレクトリの詳細な役割は、README.mdに詳細に英語で書かれているので、ここでは各ディレクトリのおおまかな役割について書いていく。&lt;br /&gt;&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;
@@ -58,164 +78,47 @@ cd my-site
   ---
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
 
-    &lt;p&gt;ここで、layout以外にも、titleやsubtitleなどのを指定しているのだが、これらもhtml生成に関わる重要な変数である。それについては次の項目で説明する。&lt;/p&gt;
+    &lt;p&gt;ここで、layout以外にも、titleやsubtitleなどのを指定しているのだが、これらもhtml生成に関わる重要な変数である。それについては次の項目で説明する。&lt;br /&gt;&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
     &lt;p&gt;_includes&lt;/p&gt;
 
-    &lt;p&gt;例えば、_layoutsのdefault.htmlが以下のようになっているとする。
-  ```html
-  &amp;lt;!DOCTYPE html&amp;gt;&lt;/p&gt;
-    &lt;html&gt;
-  &lt;head&gt;
-  &lt;meta charset=&quot;utf-8&quot; /&gt;
-  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot; /&gt;
-  &amp;lt;meta name=&quot;theme-color&quot; content=#ffffff&amp;gt;
-  &lt;link rel=&quot;stylesheet&quot; href=&quot;/blog/assets/css/app.css&quot; /&gt;
-  &lt;link rel=&quot;shortcut icon&quot; type=&quot;image/png&quot; href=&quot;/blog/licky.JPG&quot; /&gt;
-  &lt;script src=&quot;https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.8.0/dist/alpine.min.js&quot; defer=&quot;&quot;&gt;&lt;/script&gt;
-  &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css&quot; /&gt;
+    &lt;p&gt;例えば、_layoutsのdefault.htmlが以下のようになっているとする。&lt;/p&gt;
+    &lt;pre&gt;&lt;code class=&quot;language-html:default.html&quot;&gt;    
+  &amp;lt;html {% if site.fixed_navbar %} class=&quot;has-navbar-fixed-{{ site.fixed_navbar }}&quot; {% endif %}&amp;gt;
+  {% include head.html %}
+  &amp;lt;body&amp;gt;
+      {% include header.html %}
+      {% unless page.hide_hero %}
+          {% include hero.html %}
+      {% endunless %}
+  &amp;lt;/body&amp;gt;
+  &amp;lt;/html&amp;gt;
     
-      &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/bulma-social@1/bin/bulma-social.min.css&quot; /&gt;
-    
-  &lt;!-- Begin Jekyll SEO tag v2.7.1 --&gt;
-&lt;/head&gt;&lt;/html&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+    &lt;p&gt;ここで、&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;{% include header.html %}&lt;/code&gt;のように埋め込まれているheader.htmlを_includesファイル内から参照してhtmlを作成している。つまり、_layouts内のテンプレートの各構成要素のさらなるテンプレートとなるファイルを保持しているのが_includesディレクトリであるわけだ。&lt;/p&gt;
+
+    &lt;p&gt;また、_includesの各ファイルの中で、ところどころ&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;{{ page.title}}&lt;/code&gt;のようにLiquidの変数が埋め込まれている箇所がある。先ほどのindex.mdの例であげた冒頭の記述は、これらの変数を指定してあげているのだ。 &lt;br /&gt;&lt;/p&gt;
   &lt;/li&gt;
-&lt;/ul&gt;
-&lt;title&gt;Jekyllの仕組み | Ryoya Nara&lt;/title&gt;
-&lt;meta name=&quot;generator&quot; content=&quot;Jekyll v3.9.0&quot; /&gt;
-
-&lt;meta property=&quot;og:title&quot; content=&quot;Jekyllの仕組み&quot; /&gt;
-
-&lt;meta property=&quot;og:locale&quot; content=&quot;en_US&quot; /&gt;
-
-&lt;meta name=&quot;description&quot; content=&quot;春休みにWebの勉強してみよう！と思い、友人から紹介されてJekyllでオリジナルのブログサイトを作ってみることにした。「簡単にできるよ」と言われたが、実際にテンプレートを自分でアレンジしようとすると意外と苦戦したので、メモとして残しておく。&quot; /&gt;
-
-&lt;meta property=&quot;og:description&quot; content=&quot;春休みにWebの勉強してみよう！と思い、友人から紹介されてJekyllでオリジナルのブログサイトを作ってみることにした。「簡単にできるよ」と言われたが、実際にテンプレートを自分でアレンジしようとすると意外と苦戦したので、メモとして残しておく。&quot; /&gt;
-
-&lt;link rel=&quot;canonical&quot; href=&quot;http://localhost:4000/blog/2021/03/05/Jekyll%E3%81%AE%E4%BB%95%E7%B5%84%E3%81%BF.html&quot; /&gt;
-
-&lt;meta property=&quot;og:url&quot; content=&quot;http://localhost:4000/blog/2021/03/05/Jekyll%E3%81%AE%E4%BB%95%E7%B5%84%E3%81%BF.html&quot; /&gt;
-
-&lt;meta property=&quot;og:site_name&quot; content=&quot;Ryoya Nara&quot; /&gt;
-
-&lt;meta property=&quot;og:type&quot; content=&quot;article&quot; /&gt;
-
-&lt;meta property=&quot;article:published_time&quot; content=&quot;2021-03-05T14:45:00+09:00&quot; /&gt;
-
-&lt;meta name=&quot;twitter:card&quot; content=&quot;summary&quot; /&gt;
-
-&lt;meta property=&quot;twitter:title&quot; content=&quot;Jekyllの仕組み&quot; /&gt;
-
-&lt;script type=&quot;application/ld+json&quot;&gt;
-{&quot;url&quot;:&quot;http://localhost:4000/blog/2021/03/05/Jekyll%E3%81%AE%E4%BB%95%E7%B5%84%E3%81%BF.html&quot;,&quot;headline&quot;:&quot;Jekyllの仕組み&quot;,&quot;dateModified&quot;:&quot;2021-03-05T14:45:00+09:00&quot;,&quot;datePublished&quot;:&quot;2021-03-05T14:45:00+09:00&quot;,&quot;description&quot;:&quot;春休みにWebの勉強してみよう！と思い、友人から紹介されてJekyllでオリジナルのブログサイトを作ってみることにした。「簡単にできるよ」と言われたが、実際にテンプレートを自分でアレンジしようとすると意外と苦戦したので、メモとして残しておく。&quot;,&quot;mainEntityOfPage&quot;:{&quot;@type&quot;:&quot;WebPage&quot;,&quot;@id&quot;:&quot;http://localhost:4000/blog/2021/03/05/Jekyll%E3%81%AE%E4%BB%95%E7%B5%84%E3%81%BF.html&quot;},&quot;@type&quot;:&quot;BlogPosting&quot;,&quot;@context&quot;:&quot;https://schema.org&quot;}&lt;/script&gt;
-
-&lt;!-- End Jekyll SEO tag --&gt;
-&lt;!-- head scripts --&gt;
-&lt;p&gt;&amp;lt;/head&amp;gt;&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;body&amp;gt;
-    &amp;lt;nav class=&quot;navbar is-primary &quot; x-data=&quot;{ openNav: false }&quot;&amp;gt;
-&amp;lt;div class=&quot;container&quot;&amp;gt;
-    &amp;lt;div class=&quot;navbar-brand&quot;&amp;gt;
-        &amp;lt;a href=&quot;/blog/&quot; class=&quot;navbar-item&quot;&amp;gt;
-            Ryoya Nara
-        &amp;lt;/a&amp;gt;
-        &amp;lt;a role=&quot;button&quot; class=&quot;navbar-burger burger&quot; aria-label=&quot;menu&quot; aria-expanded=&quot;false&quot; data-target=&quot;navMenu&quot; :class=&quot;{ 'is-active': openNav }&quot; x-on:click=&quot;openNav = !openNav&quot;&amp;gt;
-            &amp;lt;span aria-hidden=&quot;true&quot;&amp;gt;&amp;lt;/span&amp;gt;
-            &amp;lt;span aria-hidden=&quot;true&quot;&amp;gt;&amp;lt;/span&amp;gt;
-            &amp;lt;span aria-hidden=&quot;true&quot;&amp;gt;&amp;lt;/span&amp;gt;
-        &amp;lt;/a&amp;gt;
-    &amp;lt;/div&amp;gt;
-    &amp;lt;div class=&quot;navbar-menu&quot; id=&quot;navMenu&quot; :class=&quot;{ 'is-active': openNav }&quot;&amp;gt;
-        &amp;lt;div class=&quot;navbar-start&quot;&amp;gt;
-            &amp;lt;a href=&quot;/blog/&quot; class=&quot;navbar-item &quot;&amp;gt;Home&amp;lt;/a&amp;gt;
-            
-            
-                
-                &amp;lt;a href=&quot;/blog/profile.html&quot; class=&quot;navbar-item &quot;&amp;gt;Profile&amp;lt;/a&amp;gt;
-                
-            
-            
-        &amp;lt;/div&amp;gt;
-
-        &amp;lt;div class=&quot;navbar-end&quot;&amp;gt;
-            
-        &amp;lt;/div&amp;gt;
-
-    &amp;lt;/div&amp;gt;
-&amp;lt;/div&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;&amp;lt;/nav&amp;gt;&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;        &amp;lt;section class=&quot;hero  is-medium  is-bold is-primary&quot; &amp;gt;
-&amp;lt;div class=&quot;hero-body &quot;&amp;gt;
-    &amp;lt;div class=&quot;container&quot;&amp;gt;
-        &amp;lt;h1 class=&quot;title is-2&quot;&amp;gt;Jekyllの仕組み&amp;lt;/h1&amp;gt;
-        &amp;lt;p class=&quot;subtitle is-3&quot;&amp;gt;&amp;lt;/p&amp;gt;
-        
-    &amp;lt;/div&amp;gt;
-&amp;lt;/div&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;&amp;lt;/section&amp;gt;&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;.....
-
-```
-ここで、```&amp;lt;nav class=&quot;navbar is-primary &quot; x-data=&quot;{ openNav: false }&quot;&amp;gt;
-&amp;lt;div class=&quot;container&quot;&amp;gt;
-    &amp;lt;div class=&quot;navbar-brand&quot;&amp;gt;
-        &amp;lt;a href=&quot;/blog/&quot; class=&quot;navbar-item&quot;&amp;gt;
-            Ryoya Nara
-        &amp;lt;/a&amp;gt;
-        &amp;lt;a role=&quot;button&quot; class=&quot;navbar-burger burger&quot; aria-label=&quot;menu&quot; aria-expanded=&quot;false&quot; data-target=&quot;navMenu&quot; :class=&quot;{ 'is-active': openNav }&quot; x-on:click=&quot;openNav = !openNav&quot;&amp;gt;
-            &amp;lt;span aria-hidden=&quot;true&quot;&amp;gt;&amp;lt;/span&amp;gt;
-            &amp;lt;span aria-hidden=&quot;true&quot;&amp;gt;&amp;lt;/span&amp;gt;
-            &amp;lt;span aria-hidden=&quot;true&quot;&amp;gt;&amp;lt;/span&amp;gt;
-        &amp;lt;/a&amp;gt;
-    &amp;lt;/div&amp;gt;
-    &amp;lt;div class=&quot;navbar-menu&quot; id=&quot;navMenu&quot; :class=&quot;{ 'is-active': openNav }&quot;&amp;gt;
-        &amp;lt;div class=&quot;navbar-start&quot;&amp;gt;
-            &amp;lt;a href=&quot;/blog/&quot; class=&quot;navbar-item &quot;&amp;gt;Home&amp;lt;/a&amp;gt;
-            
-            
-                
-                &amp;lt;a href=&quot;/blog/profile.html&quot; class=&quot;navbar-item &quot;&amp;gt;Profile&amp;lt;/a&amp;gt;
-                
-            
-            
-        &amp;lt;/div&amp;gt;
-
-        &amp;lt;div class=&quot;navbar-end&quot;&amp;gt;
-            
-        &amp;lt;/div&amp;gt;
-
-    &amp;lt;/div&amp;gt;
-&amp;lt;/div&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;&amp;lt;/nav&amp;gt;
-```のように埋め込まれているheader.htmlを_includesファイル内から参照してhtmlを作成している。つまり、_layouts内のテンプレートの各構成要素のさらなるテンプレートとなるファイルを保持しているのが_includesディレクトリであるわけだ。&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;また、_includesの各ファイルの中で、ところどころ```Jekyllの仕組み```のように変数が埋め込まれている箇所がある。先ほどのindex.mdの例であげた冒頭の記述は、これらの変数を指定してあげているのだ。
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;ul&gt;
   &lt;li&gt;
     &lt;p&gt;_posts&lt;/p&gt;
 
     &lt;p&gt;ブログの投稿のmdファイルを入れるところ。&lt;/p&gt;
+
     &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  ---
   layout: post
   title:  &quot;2A総括&quot;
   date:   2021-02-26 14:15 +0900
   ---
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-    &lt;p&gt;冒頭にこのように記述して、テンプレートに埋める変数に代入している。&lt;/p&gt;
+
+    &lt;p&gt;冒頭にこのように記述して、テンプレートに埋める変数に代入している。&lt;br /&gt;&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
     &lt;p&gt;_sass, assets, node_modules&lt;/p&gt;
 
-    &lt;p&gt;各cssを出力するためのテンプレートとなるscssファイルやcssファイル、jsファイルが置かれている(正直まだあまり仕組みが分かってない…)。&lt;/p&gt;
+    &lt;p&gt;各cssを出力するためのテンプレートとなるscssファイルやcssファイル、jsファイルが置かれている(正直まだあまり仕組みが分かってない…)。&lt;br /&gt;&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
     &lt;p&gt;_site&lt;/p&gt;
@@ -224,10 +127,26 @@ cd my-site
   &lt;/li&gt;
   &lt;li&gt;
     &lt;p&gt;_config.yml&lt;/p&gt;
+
+    &lt;p&gt;各テンプレートに埋め込む変数に代入する値を決めるファイル。&lt;/p&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;以下のように&lt;/p&gt;</content><author><name></name></author><summary type="html">春休みにWebの勉強してみよう！と思い、友人から紹介されてJekyllでオリジナルのブログサイトを作ってみることにした。「簡単にできるよ」と言われたが、実際にテンプレートを自分でアレンジしようとすると意外と苦戦したので、メモとして残しておく。</summary></entry><entry><title type="html">2A総括</title><link href="http://localhost:4000/blog/2021/02/26/2A%E6%8C%AF%E3%82%8A%E8%BF%94%E3%82%8A.html" rel="alternate" type="text/html" title="2A総括" /><published>2021-02-26T14:15:00+09:00</published><updated>2021-02-26T14:15:00+09:00</updated><id>http://localhost:4000/blog/2021/02/26/2A%E6%8C%AF%E3%82%8A%E8%BF%94%E3%82%8A</id><content type="html" xml:base="http://localhost:4000/blog/2021/02/26/2A%E6%8C%AF%E3%82%8A%E8%BF%94%E3%82%8A.html">&lt;p&gt;2Aセメスターが終わったということで、せっかくだし軽く振り返り。
+&lt;h2 id=&quot;コマンドを叩いた際のファイル生成の流れ&quot;&gt;コマンドを叩いた際のファイル生成の流れ&lt;/h2&gt;
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;_posts以下のmarkdownファイルや親ディレクトリ以下のmarkdownファイルを参照し、それに合うようなhtml, CSSファイルを作成する。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;_site以下にhtml, CSSを出力する。&lt;/p&gt;
+
+    &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;最後に&quot;&gt;最後に&lt;/h2&gt;
+
+&lt;p&gt;正直最後の方は疲れてしまってだいぶ雑になってしまったが、まぁおおまかにこれくらい把握しておけば大体あとは自分でアレンジが聞くと思う。実際にいじってみるとめちゃくちゃ面白いので、もう少しきちんと勉強して頑張ってみたい。&lt;/p&gt;</content><author><name></name></author><summary type="html">春休みにWebの勉強してみよう！と思い、友人から紹介されてJekyllでオリジナルのブログサイトを作ってみることにした。「簡単にできるよ」と言われたが、実際にテンプレートを自分でアレンジしようとすると意外と苦戦したので、メモとして残しておく。</summary></entry><entry><title type="html">2A総括</title><link href="http://localhost:4000/blog/2021/02/26/2A%E6%8C%AF%E3%82%8A%E8%BF%94%E3%82%8A.html" rel="alternate" type="text/html" title="2A総括" /><published>2021-02-26T14:15:00+09:00</published><updated>2021-02-26T14:15:00+09:00</updated><id>http://localhost:4000/blog/2021/02/26/2A%E6%8C%AF%E3%82%8A%E8%BF%94%E3%82%8A</id><content type="html" xml:base="http://localhost:4000/blog/2021/02/26/2A%E6%8C%AF%E3%82%8A%E8%BF%94%E3%82%8A.html">&lt;p&gt;2Aセメスターが終わったということで、せっかくだし軽く振り返り。
 僕は先輩から20コマ取ることを勧められたので、とりあえず以下の20コマを登録した。&lt;/p&gt;
 
 &lt;table&gt;
